@@ -1,0 +1,37 @@
+images/
+
+science/
+
+    p1.jpg
+    p2.jpg
+    p3.jpg
+    p4.jpg
+    p5.jpg
+    p6.jpg
+
+    thumbs/
+
+        p1.jpg
+        p2.jpg
+        p3.jpg
+        p4.jpg
+        p5.jpg
+        p6.jpg
+
+videos/
+
+science/
+
+    intro.mp4
+
+    walk1.mp4
+    walk2.mp4
+    walk3.mp4
+    walk4.mp4
+    walk5.mp4
+
+    back1.mp4
+    back2.mp4
+    back3.mp4
+    back4.mp4
+    back5.mp4

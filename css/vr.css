@@ -1,0 +1,504 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:#000;
+}
+
+/* ===========================
+   MENU BUTTON
+=========================== */
+
+#menuToggle{
+
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(37,99,235,.9);
+
+    color:white;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    z-index:1002;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+    transition:.3s;
+
+}
+
+#menuToggle:hover{
+
+    transform:scale(1.08);
+
+    background:#1d4ed8;
+
+}
+
+/* ===========================
+   MENU
+=========================== */
+
+#menu{
+
+    position:absolute;
+
+    top:20px;
+    left:-360px;
+
+    width:320px;
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:rgba(15,23,42,.82);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    color:white;
+
+    z-index:1001;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.45);
+
+    transition:left .45s ease;
+
+}
+
+#menu.show{
+
+    left:20px;
+
+}
+
+#closeMenu{
+
+    position:absolute;
+
+    top:12px;
+    right:15px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+}
+
+#menu h2{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-size:24px;
+
+}
+
+#menu p{
+
+    text-align:center;
+
+    color:#d1d5db;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+
+}
+
+#menu hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    margin:18px 0;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.block{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:14px;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    color:white;
+
+    background:#2563eb;
+
+    transition:.3s;
+
+}
+
+.block:hover{
+
+    background:#1d4ed8;
+
+    transform:translateX(8px);
+
+}
+
+.home{
+
+    background:#dc2626;
+
+}
+
+.home:hover{
+
+    background:#b91c1c;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+#title{
+
+    position:absolute;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:1000;
+
+    text-align:center;
+
+    color:white;
+
+    text-shadow:0 4px 15px rgba(0,0,0,.7);
+
+}
+
+#title h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+#title p{
+
+    margin-top:6px;
+
+    font-size:16px;
+
+    color:#0e0e0e;
+
+}
+
+/* ===========================
+   COMPASS
+=========================== */
+
+#compass{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    padding:12px 18px;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:12px;
+
+    color:white;
+
+    z-index:1000;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   INSTRUCTIONS
+=========================== */
+
+#instructions{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:translateX(-50%);
+
+    padding:12px 22px;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:30px;
+
+    color:white;
+
+    font-size:15px;
+
+    z-index:1000;
+
+}
+
+/* ===========================
+   AFRAME
+=========================== */
+
+a-scene{
+
+    width:100vw;
+
+    height:100vh;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+#menu::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+#menu::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:10px;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+#menu{
+
+    width:85%;
+
+    left:-100%;
+
+    top:15px;
+
+}
+
+#menu.show{
+
+    left:15px;
+
+}
+
+#title{
+
+    width:90%;
+
+}
+
+#title h1{
+
+    font-size:24px;
+
+}
+
+#title p{
+
+    font-size:14px;
+
+}
+
+#instructions{
+
+    width:90%;
+
+    text-align:center;
+
+    font-size:13px;
+
+}
+
+#compass{
+
+    font-size:13px;
+
+    padding:10px 14px;
+
+}
+
+#menuToggle{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:22px;
+
+}
+
+}
+/* ===========================
+BUILDING CARDS
+=========================== */
+
+.building-card{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:15px;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    transition:.3s;
+
+}
+
+.building-card:hover{
+
+    background:rgba(255,255,255,.15);
+
+    transform:translateY(-3px);
+
+}
+
+.building-card h3{
+
+    font-size:18px;
+
+    margin-bottom:8px;
+
+}
+
+.building-card p{
+
+    font-size:14px;
+
+    color:#d1d5db;
+
+    margin-bottom:12px;
+
+}
+
+.building-card button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.building-card button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.homeButton{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#dc2626;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.homeButton:hover{
+
+    background:#b91c1c;
+
+}

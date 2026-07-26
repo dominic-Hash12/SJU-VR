@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Campus Hub | St. Joseph's University</title>
+
+<link rel="stylesheet" href="css/vr.css">
+
+<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ================= MENU BUTTON ================= -->
+
+<button id="menuToggle">
+☰
+</button>
+
+<!-- ================= TITLE ================= -->
+
+<div id="title">
+
+<h1>St. Joseph's University</h1>
+
+<p><b>Virtual Campus Navigation</b></p>
+
+</div>
+
+<!-- ================= COMPASS ================= -->
+
+<div id="compass">
+
+🧭 Main Gate
+
+</div>
+
+<!-- ================= INSTRUCTIONS ================= -->
+
+<div id="instructions">
+
+👆 Drag to look around • Open the menu or tap hotspots to explore.
+
+</div>
+
+<!-- ================= MENU ================= -->
+
+<div id="menu">
+
+<button id="closeMenu">✕</button>
+
+<h2>📍 Campus Directory</h2>
+
+<p>Select a building to begin exploring.</p>
+
+<div class="building-card">
+
+<h3>🏫 Science Block</h3>
+
+<p>Laboratories & Classrooms</p>
+
+<button onclick="location.href='blocks/science.html'">
+
+Explore →
+
+</button>
+
+</div>
+
+<div class="building-card">
+
+<h3>🏢 Magis Block</h3>
+
+<p>Main Academic Building</p>
+
+<button onclick="location.href='blocks/magis.html'">
+
+Explore →
+
+</button>
+
+</div>
+
+<div class="building-card">
+
+<h3>💼 Arrupe Block</h3>
+
+<p>Business & Management</p>
+
+<button onclick="location.href='blocks/arrupe.html'">
+
+Explore →
+
+</button>
+
+</div>
+
+<div class="building-card">
+
+<h3>🏠 New Block</h3>
+
+<p>Student Residence</p>
+
+<button onclick="location.href='blocks/new.html'">
+
+Explore →
+
+</button>
+
+</div>
+
+<div class="building-card">
+
+<h3>🎭 Auditorium</h3>
+
+<p>Events & Cultural Activities</p>
+
+<button onclick="location.href='blocks/auditorium.html'">
+
+Explore →
+
+</button>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+<button class="homeButton" onclick="location.href='index.html'">
+
+🏠 Return Home
+
+</button>
+
+</div>
+<!-- ================= 360 SCENE ================= -->
+
+<a-scene>
+
+<a-assets>
+
+<img
+id="gate"
+src="images/images.jpg">
+
+</a-assets>
+
+<a-sky src="#gate"></a-sky>
+
+<!-- ================= CAMERA ================= -->
+
+<a-camera
+position="0 1.6 0"
+look-controls="magicWindowTrackingEnabled:true">
+
+</a-camera>
+
+<!-- ================= HOTSPOTS ================= -->
+
+
+</a-scene>
+
+<script src="js/vr.js"></script>
+
+</body>
+
+</html>
